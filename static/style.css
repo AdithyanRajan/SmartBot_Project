@@ -1,129 +1,80 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Soft light background */
+    color: #333; /* Dark text color for better readability */
+}
+
 /* Container Styles */
 .container {
     background-color: #fff; /* White background for the container */
-    padding: 30px; /* Increased padding for a more spacious layout */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px; /* Increased padding for a spacious layout */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
     max-width: 400px; /* Set max width for the form */
-    margin: 40px auto; /* Center the container with top and bottom margins */
+    margin: 40px auto; /* Center the container */
 }
 
 /* Form Styles */
-.login-form {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack elements vertically */
-}
-
-.login-form label {
-    margin-bottom: 8px; /* Space between label and input */
-    font-weight: bold; /* Make labels bold for emphasis */
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    padding: 12px; /* Padding inside input fields */
-    border: 1px solid #ccc; /* Border around input fields */
-    border-radius: 4px; /* Rounded corners for input fields */
-    margin-bottom: 15px; /* Space below input fields */
-    transition: border 0.3s ease; /* Smooth border transition on focus */
-}
-
-.login-form input[type="text"]:focus,
-.login-form input[type="password"]:focus {
-    border: 1px solid #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-/* Button Styles */
-.btn {
-    padding: 12px; /* Padding inside the button */
-    font-size: 16px; /* Button text size */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners for the button */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth background transition */
-}
-
-.btn:hover {
-    background-color: #0056b3; /* Darken button color on hover */
-}
-
-/* Footer Styles */
-footer {
-    text-align: center; /* Center the footer text */
-    margin-top: 20px; /* Space above the footer */
-    font-size: 14px; /* Smaller font size for the footer */
-    color: #aaa; /* Light color for the footer text */
-}
-
-
-footer a:hover {
-    text-decoration: underline; /* Underline link on hover */
-}
-/* Container Styles */
-.container {
-    background-color: #fff; /* White background for the container */
-    padding: 30px; /* Increased padding for a more spacious layout */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 400px; /* Set max width for the form */
-    margin: 40px auto; /* Center the container with top and bottom margins */
-}
-
-/* Form Styles */
+.login-form,
 .register-form {
     display: flex; /* Flexbox for layout */
     flex-direction: column; /* Stack elements vertically */
 }
 
-.register-form label {
+form label {
     margin-bottom: 8px; /* Space between label and input */
-    font-weight: bold; /* Make labels bold for emphasis */
+    font-weight: 600; /* Bold labels for emphasis */
+    color: #555; /* Slightly darker color for labels */
 }
 
-.register-form input[type="text"],
-.register-form input[type="password"] {
-    padding: 12px; /* Padding inside input fields */
+form input[type="text"],
+form input[type="password"],
+form select {
+    padding: 14px; /* Increased padding for input fields */
     border: 1px solid #ccc; /* Border around input fields */
-    border-radius: 4px; /* Rounded corners for input fields */
+    border-radius: 6px; /* Rounded corners for input fields */
     margin-bottom: 15px; /* Space below input fields */
     transition: border 0.3s ease; /* Smooth border transition on focus */
+    font-size: 16px; /* Consistent font size for input */
 }
 
-.register-form input[type="text"]:focus,
-.register-form input[type="password"]:focus {
-    border: 1px solid #007bff; /* Change border color on focus */
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: #007bff; /* Change border color on focus */
     outline: none; /* Remove default outline */
 }
 
 /* Button Styles */
 .btn {
-    padding: 12px; /* Padding inside the button */
+    padding: 14px; /* Padding inside the button */
     font-size: 16px; /* Button text size */
     background-color: #007bff; /* Button background color */
     color: white; /* Button text color */
     border: none; /* No border */
-    border-radius: 4px; /* Rounded corners for the button */
+    border-radius: 6px; /* Rounded corners for the button */
     cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth background transition */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
 }
 
 .btn:hover {
     background-color: #0056b3; /* Darken button color on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 /* Footer Styles */
 footer {
     text-align: center; /* Center the footer text */
-    margin-top: 20px; /* Space above the footer */
+    margin-top: 30px; /* Space above the footer */
     font-size: 14px; /* Smaller font size for the footer */
     color: #aaa; /* Light color for the footer text */
 }
 
 footer a {
-    color: yellow; /* Link color */
+    color: #007bff; /* Link color */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold link text */
 }
@@ -137,8 +88,8 @@ footer a:hover {
     width: 100%;
     max-width: 1000px; /* Adjusted for a better chat UI */
     background-color: #007bff; /* Chat header background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     padding: 20px; /* Padding around the content */
     margin: 40px auto; /* Center the container */
     color: white; /* White text color for better visibility */
@@ -148,6 +99,7 @@ footer a:hover {
 .chat-header {
     text-align: center; /* Center the chat header text */
     margin-bottom: 15px; /* Space below the header */
+    font-size: 24px; /* Larger font size for header */
 }
 
 /* Chat Container Styles */
@@ -155,17 +107,17 @@ footer a:hover {
     height: 300px; /* Set a fixed height for the chat area */
     border: 1px solid #ccc; /* Light border for chat area */
     padding: 10px; /* Padding inside the chat area */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 12px; /* Rounded corners */
     overflow-y: auto; /* Scrollable chat area */
-    background-color: #f1f1f1; /* Light background for chat area */
+    background-color: #f9f9f9; /* Light background for chat area */
     color: #333; /* Dark text color for chat messages */
 }
 
 /* Message Styles */
 .message {
     margin-bottom: 10px; /* Space between messages */
-    padding: 8px; /* Padding inside message bubbles */
-    border-radius: 8px; /* Rounded corners for messages */
+    padding: 10px; /* Padding inside message bubbles */
+    border-radius: 12px; /* Rounded corners for messages */
     max-width: 75%; /* Limit message width */
     display: inline-block; /* Inline for proper alignment */
 }
@@ -192,22 +144,7 @@ footer a:hover {
     flex-grow: 1; /* Allow input field to grow */
     padding: 12px; /* Padding inside input */
     border: 1px solid #ccc; /* Border for input */
-    border-radius: 4px; /* Rounded corners */
-}
-
-/* Button Styles */
-.btn {
-    padding: 12px; /* Padding inside the button */
-    font-size: 16px; /* Button text size */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners for the button */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-.btn:hover {
-    background-color: #0056b3; /* Darken button color on hover */
+    border-radius: 6px; /* Rounded corners */
 }
 
 /* Responsive Styles */
@@ -215,14 +152,6 @@ footer a:hover {
     .main-container {
         width: 90%; /* Make the chat container responsive */
     }
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif; /* Font for the entire site */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: yellow; /* Light background color */
 }
 
 /* Navbar Styles */
@@ -262,36 +191,19 @@ body {
     min-height: calc(100vh - 200px); /* Space for footer */
 }
 
-/* Footer Styles */
-footer {
-    background-color: #007bff; /* Footer background color */
-    color: white; /* Footer text color */
-    text-align: center; /* Center text */
-    padding: 10px 0; /* Padding in footer */
-    position: relative; /* Position relative for styling */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column; /* Stack links on smaller screens */
-        gap: 10px; /* Smaller gap */
-    }
-}
-
 /* Settings Form Styles */
-.container {
-    background-color: orange; /* White background for form */
-    padding: 20px; /* Padding around the container */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.settings-container {
+    background-color: #fff; /* White background for form */
+    padding: 30px; /* Padding around the container */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.form-group {
-    margin-bottom: 15px; /* Spacing between form groups */
+.settings-form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
 }
 
-label {
+.settings-form-group label {
     display: block; /* Labels on a new line */
     margin-bottom: 5px; /* Space between label and input */
     font-weight: bold; /* Bold labels */
@@ -299,22 +211,38 @@ label {
 
 select {
     width: 100%; /* Full width select */
-    padding: 10px; /* Padding inside select */
+    padding: 14px; /* Padding inside select */
     border: 1px solid #ccc; /* Border for select */
-    border-radius: 4px; /* Rounded corners for select */
+    border-radius: 6px; /* Rounded corners for select */
     box-sizing: border-box; /* Include padding in width */
 }
 
-.btn {
-    background-color: greenyellow; /* Button background */
+/* Button Styles */
+.btn-settings {
+    background-color: #28a745; /* Button background */
     color: white; /* Button text color */
     border: none; /* No border */
-    padding: 10px 15px; /* Padding for button */
-    border-radius: 4px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for button */
+    border-radius: 6px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s; /* Transition for hover effect */
+    transition: background-color 0.3s ease, transform 0.2s; /* Transition for hover effect */
 }
 
-.btn:hover {
-    background-color: green; /* Darker blue on hover */
+.btn-settings:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-in; /* Fade-in effect for containers */
 }
